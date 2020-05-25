@@ -16,19 +16,29 @@
 
 <script language="javascript">
     if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
-        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-        httpRequest.open('GET', 'https://captain9911.github.io/projectlogin?ProjectName=信江城&ProjectID=hl20ybSkEE2SUs5BWawFVw&ProjectSecret=DYqAcJ1pMUK9gQMHH9zGYg', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
-        httpRequest.send();//第三步：发送请求  将请求参数写在URL中
-        /**
-         * 获取数据后的处理程序
-         */
-        httpRequest.onreadystatechange = function () {
-            if (httpRequest.status == 200) {
-                window.location = "https://captain9911.github.io/projectlogin?ProjectName=信江城&ProjectID=hl20ybSkEE2SUs5BWawFVw&ProjectSecret=DYqAcJ1pMUK9gQMHH9zGYg";
-            } else {
-                window.location = "https://apps.apple.com/cn/app/id1449576412";
-            }
-        };
+        var state = null;
+        try {
+            state = window.open("https://captain9911.github.io/projectlogin?ProjectName=信江城&ProjectID=hl20ybSkEE2SUs5BWawFVw&ProjectSecret=DYqAcJ1pMUK9gQMHH9zGYg");
+        } catch (e) { }
+        if (state) {
+            window.close();
+        } else {
+            window.location = "https://apps.apple.com/cn/app/id1449576412";
+        }
+//         var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+//         httpRequest.open('GET', 'https://captain9911.github.io/projectlogin?ProjectName=信江城&ProjectID=hl20ybSkEE2SUs5BWawFVw&ProjectSecret=DYqAcJ1pMUK9gQMHH9zGYg', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+//         httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+//         /**
+//          * 获取数据后的处理程序
+//          */
+//         httpRequest.onreadystatechange = function () {
+//             if (httpRequest.status == 200) {
+//                 window.location = "https://captain9911.github.io/projectlogin?ProjectName=信江城&ProjectID=hl20ybSkEE2SUs5BWawFVw&ProjectSecret=DYqAcJ1pMUK9gQMHH9zGYg";
+//             } else {
+//                 window.location = "https://apps.apple.com/cn/app/id1449576412";
+//             }
+//         };
+        
 //         var loadDateTime = new Date();
 //         window.setTimeout(function () {
 //             var timeOutDateTime = new Date();
