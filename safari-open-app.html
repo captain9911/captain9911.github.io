@@ -13,3 +13,28 @@
     <p>这个页面如果在微信中打开，无法直接打开“家和园”，需要点击右上角的"..."按钮，并选择“在Safari中打开”。</p>
 </body>
 </html>
+
+<script language="javascript">
+    if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+        var loadDateTime = new Date();
+        window.setTimeout(function () {
+            var timeOutDateTime = new Date();
+            if (timeOutDateTime - loadDateTime < 5000) {
+                window.location = "jiaheyuan://projectlogin?ProjectName=信江城&ProjectID=hl20ybSkEE2SUs5BWawFVw&ProjectSecret=DYqAcJ1pMUK9gQMHH9zGYg";
+            } else {
+                window.close();
+            }
+        }, 25);
+        window.location = " apps custom url schemes ";
+    } else if (navigator.userAgent.match(/android/i)) {
+        var state = null;
+        try {
+            state = window.open("apps custom url schemes ", '_blank');
+        } catch (e) { }
+        if (state) {
+            window.close();
+        } else {
+            window.location = "要跳转的页面URL";
+        }
+    }
+</script>
