@@ -16,15 +16,17 @@
 
 <script language="javascript">
     if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
-        var state = null;
-        try {
-            state = window.open("jiaheyuan://projectlogin?ProjectName=信江城&ProjectID=hl20ybSkEE2SUs5BWawFVw&ProjectSecret=DYqAcJ1pMUK9gQMHH9zGYg");
-        } catch (e) { }
-        if (state) {
-            window.close();
-        } else {
-            window.location = "https://apps.apple.com/cn/app/id1449576412";
-        }
+        var loadDateTime = new Date();
+        window.setTimeout(function () {
+            var timeOutDateTime = new Date();
+            if (timeOutDateTime - loadDateTime < 5000) {
+                window.location = "https://apps.apple.com/cn/app/id1449576412";
+            } else {
+                window.close();
+                //window.location = "https://apps.apple.com/cn/app/id1449576412";
+            }
+        }, 25);
+        window.location = "jiaheyuan://projectlogin?ProjectName=信江城&ProjectID=hl20ybSkEE2SUs5BWawFVw&ProjectSecret=DYqAcJ1pMUK9gQMHH9zGYg";
     } else if (navigator.userAgent.match(/android/i)) {
         var state = null;
         try {
