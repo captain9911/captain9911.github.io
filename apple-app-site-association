@@ -9,6 +9,10 @@
       {
         "appID": "67HQS3X8GV.cn.vrv.sqfk",
         "paths": ["*"]
+      },
+      {
+        "appID": "77SC5D8ZTQ.com.gfyt.demo",
+        "paths": ["*"]
       }
     ]
   }
