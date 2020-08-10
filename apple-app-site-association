@@ -4,15 +4,21 @@
     "details": [
       {
         "appID": "77SC5D8ZTQ.com.gfyt.WisdomPark",
-        "paths": ["*"]
+        "paths": [
+          "*"
+        ]
       },
       {
         "appID": "67HQS3X8GV.cn.vrv.sqfk",
-        "paths": ["*"]
+        "paths": [
+          "*"
+        ]
       },
       {
         "appID": "77SC5D8ZTQ.com.gfyt.demo",
-        "paths": ["*"]
+        "paths": [
+          "*"
+        ]
       }
     ]
   }
